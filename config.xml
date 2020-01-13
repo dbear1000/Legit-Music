@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.legitmusic.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Legit Music</name>
+    <description>
+        A PhoneGap app.
+    </description>
+    <author email="darren.hill@altern8.solutions">
+        Darren Hill
+    </author>
+    <content src="index.html" />
+    <platform name="ios">
+		<icon src="www/res/icon.png" />
+	</platform>
+    <access origin="*" />
+</widget>
