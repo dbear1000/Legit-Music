@@ -8,9 +8,8 @@
         Darren Hill
     </author>
     <content src="index.html" />
-    <icon src="www/res/icon.png" />
     <platform name="ios">
-        <icon src="www/res/icon.png" width="57" height="57" />
+        <icon platform="ios" src="www/res/icon.png" width="57" height="57" />
 	</platform>
     <access origin="*" />
 </widget>
