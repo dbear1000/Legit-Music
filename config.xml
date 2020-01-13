@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
     <platform name="ios">
-        <icon platform="ios" src="www/res/icon.png" width="57" height="57" />
+        <icon src="www/res/icon.png" width="57" height="57" />
 	</platform>
     <access origin="*" />
 </widget>
