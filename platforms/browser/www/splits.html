@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>BootVueTest</title>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, viewport-fit=cover">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
@@ -13,7 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
-<body style="background-image: url(&quot;https://unsplash.it/1800/900?image=1051&quot;);background-size: cover;background-repeat: no-repeat;">
+<body style="background-size: cover;background-repeat: no-repeat;background-color: #006056;">
     <div class="container" id="splits" style="height: 100vh;background-color: rgba(255,255,255,0.4);min-width: 100vw;">
         <div class="row">
             <div class="col">
@@ -30,13 +31,14 @@
             <form class="container">
                 <div class="form-group" style="padding: 20px;" v-if="steps == 1"><input class="form-control" type="text" placeholder="What is the song title?" v-model="contract.songtitle" v-on:keydown.enter.prevent="" style="background-color: transparent;"></div>
                 <div class="form-group" style="padding: 20px;" v-if="steps == 2"><input class="form-control" type="number" placeholder="How many writers / composers?" v-model="contract.totalWriters" v-on:enter.prevent="" style="background-color: transparent;"></div>
-                <div class="form-group" v-for="(writer, index) in contract.writers"><label>Writer - {{&nbsp;writer.uid }}</label><input class="form-control" type="text" placeholder="Full Name" v-model="writer.name"><input class="form-control" type="number" placeholder="Performance Split (e.g 50)" style="margin-top: 6px;"
-                        v-model="writer.splits.performance"><input class="form-control" type="number" placeholder="Mechanical Split (e.g 50)" style="margin-top: 6px;" v-model="writer.splits.mechanical"></div>
-                <div class="form-group text-center" style="padding: 20px;"><button class="btn btn-primary" type="button" style="margin-top: 8px;margin-right: 4px;" v-if="steps > 1 &amp;&amp; steps !== totalsteps &amp;&amp; steps !== 3" v-on:click="prevStep()">Previous</button><a class="btn btn-success" role="button"
+                <div class="form-group" v-for="(writer, index) in contract.writers"><label>Writer - {{&nbsp;writer.uid }}</label><input class="form-control" type="text" placeholder="Full Name" v-model="writer.name" style="background-color: transparent;"><input class="form-control" type="number" placeholder="Performance Split (e.g 50)"
+                        style="margin-top: 6px;background-color: transparent;" v-model="writer.splits.performance"><input class="form-control" type="number" placeholder="Mechanical Split (e.g 50)" style="margin-top: 6px;background-color: transparent;" v-model="writer.splits.mechanical"></div>
+                <div
+                    class="form-group text-center" style="padding: 20px;"><button class="btn btn-primary" type="button" style="margin-top: 8px;margin-right: 4px;" v-if="steps > 1 &amp;&amp; steps !== totalsteps &amp;&amp; steps !== 3" v-on:click="prevStep()">Previous</button><a class="btn btn-success" role="button"
                         style="margin-top: 8px;margin-right: 4px;" v-if="steps === 3" v-on:click="createContract" href="contract.html">Submit</a><button class="btn btn-primary" type="button" style="margin-top: 8px;margin-right: 4px;" v-if="contract.songtitle.length > 0 &amp;&amp; steps < totalsteps &amp;&amp; steps !== 3"
                         v-on:click="nextStep()">Next</button></div>
-            </form>
-        </div>
+        </form>
+    </div>
     </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
