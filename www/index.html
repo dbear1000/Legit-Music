@@ -15,14 +15,14 @@
 </head>
 
 <body>
-    <div id="home" class="login-clean" style="height: 100vh;padding-top: 39px;">
-        <form method="post">
+    <div id="home" class="login-clean" style="height: 100vh;">
+        <form action="dashboard.html" method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration" style="font-size: 24px;"><img src="assets/img/icon-1024.png" style="width: 120px;"></div>
-            <div class="form-group"><input class="form-control" type="text" v-model="creds.name" placeholder="Full Name"></div>
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" v-model="creds.email"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" v-model="creds.password"></div>
-            <div class="form-group"><a class="btn btn-primary btn-block" v-on:click="storeCredentials" style="background-color: #059492;color: #f1f7fc;" href="dashboard.html">Submit</a></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+            <div class="form-group"><input class="form-control" type="text" v-model="creds.name" placeholder="Full Name" required="" minlength="2"></div>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" v-model="creds.email" inputmode="email" required="" pattern="(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|&quot;(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*&quot;)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+                    autocomplete="off"></div>
+            <div class="form-group"><button class="btn btn-primary d-block" type="submit" style="background-color: #059492;" v-on:click="storeCredentials">Submit</button></div><a class="forgot" href="#">Forgot your email or password?</a></form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

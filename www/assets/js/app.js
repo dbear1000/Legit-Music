@@ -5,7 +5,6 @@ var home = new Vue({
 			creds: {
 				name: '',
 				email: '',
-				password: '',
 			}
 		}
 	},
@@ -80,6 +79,7 @@ var calc = new Vue({
 			return {
 				creds: JSON.parse(localStorage.creds),
 				streams: null,
+				rate: 1,
 				sign: "$",
 				s: {
 					napster: 0,
@@ -94,15 +94,25 @@ var calc = new Vue({
 			}
 	},
 	methods: {
+		getRate(e){
+			if(this.rate === 1){
+				this.rate = 0.77
+				this.sign = "£"
+			} else {
+				this.rate = 1
+				this.sign = "$"
+			}
+			this.calculate(this.rate)
+		},
 		calculate(rate){
-			this.s.napster = this.sign + Math.round(this.streams * 0.019);
-			this.s.spotify = this.sign + Math.round(this.streams * 0.00437);
-			this.s.tidal = this.sign + Math.round(this.streams * 0.0125);
-			this.s.apple = this.sign + Math.round(this.streams * 0.00735);
-			this.s.google = this.sign + Math.round(this.streams * 0.00676);
-			this.s.deezer = this.sign + Math.round(this.streams * 0.0064);
-			this.s.amazon = this.sign + Math.round(this.streams * 0.00402);
-			this.s.pandora = this.sign + Math.round(this.streams * 0.00133);
+			this.s.napster = this.sign + Math.round((this.streams * 0.019) * this.rate);
+			this.s.spotify = this.sign + Math.round((this.streams * 0.00437) * this.rate);
+			this.s.tidal = this.sign + Math.round((this.streams * 0.0125) * this.rate);
+			this.s.apple = this.sign + Math.round((this.streams * 0.00735) * this.rate);
+			this.s.google = this.sign + Math.round((this.streams * 0.00676) * this.rate);
+			this.s.deezer = this.sign + Math.round((this.streams * 0.0064) * this.rate);
+			this.s.amazon = this.sign + Math.round((this.streams * 0.00402) * this.rate);
+			this.s.pandora = this.sign + Math.round((this.streams * 0.00133) * this.rate);
 		}
 	},
 })

@@ -27,78 +27,78 @@
             </div>
         </nav>
         <div class="row">
-            <div class="col d-flex" style="padding: 15px;"><input class="flex-grow-1 text-center" type="number" required="" name="amount" placeholder="How many Streams" style="padding: 5px;" step="none" v-model="streams"></div>
+            <div class="col d-flex" style="padding: 15px;"><input class="flex-grow-1 text-center" type="number" required="" name="amount" placeholder="How many Streams" style="padding: 5px;" step="none" v-model="streams" pattern="\d*"></div>
         </div>
         <div class="form-group"><button class="btn btn-primary btn-block" type="button" style="background-color: #059492;" v-on:click="calculate">Calculate</button>
-            <hr><button class="btn btn-primary" type="button" style="background-color: #059492;" v-on:click="calculate">£</button><button class="btn btn-primary" type="button" style="background-color: #059492;margin-left: 12px;" v-on:click="calculate">$</button></div>
-        <div
-            class="col-3"></div>
-    <div class="row d-flex">
-        <div class="col-6 offset-sm-0">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">Napster</h6>
-                    <h6 class="card-title">{{ s.napster }}</h6>
+            <hr>
+            <div class="btn-group" role="group"><button class="btn btn-primary currency" type="button" v-on:click="getRate">£</button><button class="btn btn-primary currency" type="button" v-on:click="getRate" style="margin-left: 5px;">$</button></div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-6 offset-sm-0">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">Napster</h5>
+                        <h6 class="card-title">{{ s.napster }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">Spotify</h5>
+                        <h6 class="card-title">{{ s.spotify }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">TIDAL</h5>
+                        <h6 class="card-title">{{ s.tidal }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">Apple</h5>
+                        <h6 class="card-title">{{ s.apple }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">Google</h5>
+                        <h6 class="card-title">{{ s.google }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">Deezer</h5>
+                        <h6 class="card-title">{{ s.deezer }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">Amazon</h5>
+                        <h6 class="card-title">{{ s.amazon }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="color: #059492;">Pandora</h5>
+                        <h6 class="card-title">{{ s.pandora }}</h6>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">Spotify</h6>
-                    <h6 class="card-title">{{ s.spotify }}</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">TIDAL</h6>
-                    <h6 class="card-title">{{ s.tidal }}</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">Apple</h6>
-                    <h6 class="card-title">{{ s.apple }}</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">Google</h6>
-                    <h6 class="card-title">{{ s.google }}</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">Deezer</h6>
-                    <h6 class="card-title">{{ s.deezer }}</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">Amazon</h6>
-                    <h6 class="card-title">{{ s.amazon }}</h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h6 class="card-title">Pandora</h6>
-                    <h6 class="card-title">{{ s.pandora }}</h6>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
