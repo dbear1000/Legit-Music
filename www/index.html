@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-        <!-- <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width"> -->
-        <meta name="viewport" content="viewport-fit=cover, user-scalable=yes, initial-scale=1.0, width=device-width" />
-        <title>Legit Music</title>
-        <style>
-            html {
-                height:100%;
-            }
-            body {
-                background-color:#FFF;
-                margin:0;
-                height:100%;
-                padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
-                padding-top: env(safe-area-inset-top); /* iOS 11.2 */
-            }
-            input {
-                width: 96%;
-                height: 28px;
-                margin: 4px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="streamapp_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:896px;overflow:hidden;">
-            <script type="text/javascript" charset="utf-8" src="StreamApp.hyperesources/streamapp_hype_generated_script.js?68376"></script>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BootVueTest</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, viewport-fit=cover">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="home" class="login-clean" style="height: 100vh;padding-top: 39px;">
+        <form method="post">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration" style="font-size: 24px;"><img src="assets/img/icon-1024.png" style="width: 120px;"></div>
+            <div class="form-group"><input class="form-control" type="text" v-model="creds.name" placeholder="Full Name"></div>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" v-model="creds.email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" v-model="creds.password"></div>
+            <div class="form-group"><a class="btn btn-primary btn-block" v-on:click="storeCredentials" style="background-color: #059492;color: #f1f7fc;" href="dashboard.html">Submit</a></div><a class="forgot" href="#">Forgot your email or password?</a></form>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
 </html>

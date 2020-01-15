@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BootVueTest</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, viewport-fit=cover">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="card" id="contract">
+        <div class="card-header">
+            <h5 class="mb-0">Split Sheet Contract for {{ songtitle }}</h5>
+        </div>
+        <div class="card-body">
+            <p class="text-right">{{ date }}</p>
+            <p class="card-text">This is to confirm that we, the sole writers of the composition listed below, hereby agree among ourselves to the following writers’ divisions:</p>
+            <div class="row d-flex justify-content-center">
+                <div class="col-10 text-monospace" v-for="(writer, index) in writers">
+                    <h5 class="text-secondary">{{writer.name}}</h5>
+                    <ul>
+                        <li>{{ writer.splits.performance}}% Performance</li>
+                        <li>{{ writer.splits.mechanical}}% Mechanical</li>
+                    </ul>
+                    <p class="text-success"></p>
+                    <p class="text-secondary"></p>
+                </div>
+            </div>
+            <p>If any samples are contained on this song for which the sampled writer(s)/ publisher(s) are toreceive a copyright interest in and to the Composition and/ or payment of monies attributable tothe Composition, then we agree that our own shares
+                in the copyright and/or monies attributableto the Composition shall be reduced proportionately.</p>
+            <p>This Agreement contains the entire understanding of the parties hereto relating to the subjectmatter hereof and cannot be changed or terminated except by an instrument signed by all of the parties hereunder. The validity, interpretation and
+                legal effect of this Agreement shall begoverned by the laws of the England and Wales.</p>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
