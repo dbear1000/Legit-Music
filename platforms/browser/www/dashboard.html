@@ -8,6 +8,9 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, viewport-fit=cover">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -16,14 +19,19 @@
 
 <body>
     <div id="dashboard" class="container" style="height: 100vh;padding-top: 20px;">
-        <div class="row">
+        <div class="row no-gutters">
             <div class="col">
                 <section>
-                    <h2>Hi {{ creds.name }}</h2>
-                    <p>What would you like to do?</p>
+                    <h1>Hi {{ creds.name }}</h1>
+                    <p class="lead">Let's get started!!</p>
                 </section>
+                <hr style="background-color: #059492;">
             </div>
-        </div><a class="btn btn-success btn-block" role="button" href="splits.html">Creat a Contract?</a><a class="btn btn-primary btn-block" role="button" href="calculator.html">Use the calculator?</a></div>
+        </div>
+        <div class="row no-gutters d-flex justify-content-center" style="max-height: 100vh;height: 100vh;">
+            <div class="col d-flex flex-column align-items-center"><a href="splits.html"><img class="shadow-sm btn" src="assets/img/icon-1024.png" style="margin-top: 12px;" width="190" height="180"></a><a href="calculator.html"><img class="shadow-sm btn" src="assets/img/icon-1024.png" style="margin-top: 12px;" width="190" height="180"></a></div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/app.js"></script>

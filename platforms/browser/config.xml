@@ -8,6 +8,6 @@
         Darren Hill
     </author>
     <content src="index.html" />
-    <access origin="*" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
 </widget>

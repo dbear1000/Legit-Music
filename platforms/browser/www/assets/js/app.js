@@ -3,7 +3,7 @@ var home = new Vue({
 	data() {
 		return {
 			creds: {
-				name: '',
+				name: 'User',
 				email: '',
 			}
 		}
@@ -59,7 +59,8 @@ var splits = new Vue({
 					name: '',
 					splits: {
 						performance: null,
-						mechanical: null
+						mechanical: null,
+						master: null
 					}
 				});
 			}

@@ -8,6 +8,9 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height, viewport-fit=cover">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -17,14 +20,8 @@
 <body>
     <div class="container" id="calculator" style="padding: 15px;height: 100vh;">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-            <div class="container"><a class="navbar-brand" href="#">Calculator</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
-                    </ul>
-                </div>
-            </div>
+            <div class="container">
+                <h3>Calculate</h3><a class="btn btn-primary" role="button" href="dashboard.html">Home</a></div>
         </nav>
         <div class="row">
             <div class="col d-flex" style="padding: 15px;"><input class="flex-grow-1 text-center" type="number" required="" name="amount" placeholder="How many Streams" style="padding: 5px;" step="none" v-model="streams" pattern="\d*"></div>
@@ -33,68 +30,68 @@
             <hr>
             <div class="btn-group" role="group"><button class="btn btn-primary currency" type="button" v-on:click="getRate">£</button><button class="btn btn-primary currency" type="button" v-on:click="getRate" style="margin-left: 5px;">$</button></div>
         </div>
-        <div class="row d-flex">
+        <div class="row no-gutters d-flex">
             <div class="col-6 offset-sm-0">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">Napster</h5>
-                        <h6 class="card-title">{{ s.napster }}</h6>
+                        <h5 class="card-title" style="color: #059492;">Napster</h5><i class="fa fa-bandcamp" style="font-size: 40px;color: #059492;"></i>
+                        <p>{{ s.napster }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">Spotify</h5>
-                        <h6 class="card-title">{{ s.spotify }}</h6>
+                        <h5 class="card-title" style="color: #059492;">Spotify</h5><i class="fa fa-spotify" style="font-size: 40px;color: #059492;"></i>
+                        <p>{{ s.spotify }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">TIDAL</h5>
-                        <h6 class="card-title">{{ s.tidal }}</h6>
+                        <h5 class="card-title" style="color: #059492;">TIDAL</h5><i class="fab fa-amazon" style="font-size: 40px;color: #059492;"></i>
+                        <p>{{ s.tidal }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">Apple</h5>
-                        <h6 class="card-title">{{ s.apple }}</h6>
+                        <h5 class="card-title" style="color: #059492;">Apple</h5><i class="fab fa-apple" style="font-size: 40px;color: #059492;"></i>
+                        <p>{{ s.apple }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">Google</h5>
-                        <h6 class="card-title">{{ s.google }}</h6>
+                        <h5 class="card-title" style="color: #059492;">Google</h5><i class="fab fa-google-play" style="font-size: 34px;color: #059492;"></i>
+                        <p>{{ s.google }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">Deezer</h5>
-                        <h6 class="card-title">{{ s.deezer }}</h6>
+                        <h5 class="card-title" style="color: #059492;">Deezer</h5><i class="fas fa-music" style="font-size: 34px;color: #059492;"></i>
+                        <p>{{ s.deezer }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">Amazon</h5>
-                        <h6 class="card-title">{{ s.amazon }}</h6>
+                        <h5 class="card-title" style="color: #059492;">Amazon</h5><i class="fab fa-amazon" style="font-size: 40px;color: #059492;"></i>
+                        <p>{{ s.amazon }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title" style="color: #059492;">Pandora</h5>
-                        <h6 class="card-title">{{ s.pandora }}</h6>
+                        <h5 class="card-title" style="color: #059492;">Pandora</h5><i class="fas fa-music" style="font-size: 40px;color: #059492;"></i>
+                        <p>{{ s.pandora }}</p>
                     </div>
                 </div>
             </div>

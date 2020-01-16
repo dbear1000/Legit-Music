@@ -1,7 +1,16 @@
-.btn.btn-primary.currency {
+.btn.btn-primary {
   background-color: #059492;
 }
 
-.btn.btn-primary {
+.text-primary {
+  color: #059492 !important;
+}
+
+.card-body.text-center p {
+  padding-top: 12px;
+}
+
+.card {
+  border: none;
 }
 
