@@ -4,7 +4,7 @@ var home = new Vue({
 		return {
 			creds: {
 				name: 'User',
-				email: '',
+				email: 'xxx@xxx.com',
 			}
 		}
 	},
@@ -65,7 +65,6 @@ var splits = new Vue({
 				});
 			}
 			this.contract.writers = array;
-			console.log(this.contract.writers)
 		},
 		createContract(){
 			localStorage.writers = JSON.stringify(this.contract.writers)
